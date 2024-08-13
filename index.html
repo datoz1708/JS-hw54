@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form id="loginForm">
+    <label for="username">მომხმარებლის სახელი:</label><br>
+    <input type="text" id="username" name="username" onchange="handleChange(event)"> <br><br>
+
+    <label for="password">პაროლი:</label><br>
+    <input type="password" id="password" name="password" onchange="handleChange(event)"> <br><br>
+
+    <button type="submit">დადასტურება</button>
+  </form>
+
+    <script>
+      var form = document.getElementById("loginForm");
+
+      form.addEventListener("submit", function(event){
+        event.preventDefault();
+        alert("ფორმა დადასტურდა");
+      });
+
+      function handleChange(event) {
+        console.log("მოხდა ცვლილება")
+      }
+    </script>
+</body>
+</html>
